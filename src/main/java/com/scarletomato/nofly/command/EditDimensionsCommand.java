@@ -8,8 +8,10 @@ import org.apache.logging.log4j.Logger;
 
 import com.scarletomato.nofly.DimNoFly;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChatComponentText;
 
 public class EditDimensionsCommand implements ICommand {
@@ -66,7 +68,12 @@ public class EditDimensionsCommand implements ICommand {
 
 	@Override
 	public boolean canCommandSenderUseCommand(ICommandSender icommandsender) {
-		return true;
+		if(icommandsender instanceof EntityPlayer) {
+			return FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().func_152596_g(((EntityPlayer) icommandsender).getGameProfile());
+		} else {
+			//Console??
+			return true;
+		}
 	}
 
 	@Override

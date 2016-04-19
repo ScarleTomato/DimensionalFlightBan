@@ -1,0 +1,16 @@
+[
+{
+  "modid": "dimnofly",
+  "name": "Dimensional Flight Ban",
+  "description": "Bans flight per dimension",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ScarleTomato"],
+  "credits": "The Forge and FML guys, for making this simple",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

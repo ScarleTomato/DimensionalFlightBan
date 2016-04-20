@@ -32,7 +32,7 @@ public class PlayerListener {
 		EntityPlayer player = playerTick.player;
 		PlayerCapabilities cap = player.capabilities;
 		if(cap.isFlying && context.isBanned(player.dimension) && !cap.isCreativeMode){
-			LOG.info("dropping " + player.getDisplayName() + " out of the sky");
+			LOG.debug("dropping {} out of the sky", player.getDisplayName());
 			cap.isFlying = false;
 			player.sendPlayerAbilities();
 		}

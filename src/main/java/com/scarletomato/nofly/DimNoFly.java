@@ -11,7 +11,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.scarletomato.nofly.command.EditDimensionsCommand;
-import com.scarletomato.nofly.event.EventLogger;
 import com.scarletomato.nofly.event.PlayerListener;
 
 import cpw.mods.fml.common.Mod;
@@ -51,7 +50,6 @@ public class DimNoFly
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	new EventLogger().register();
     	new PlayerListener(this).register();
     }
 
